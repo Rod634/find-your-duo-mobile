@@ -6,9 +6,11 @@ import { THEME } from '../../theme';
 
 export interface GamecardProps {
     id: string,
-    name: string,
-    ads: string,
-    cover: ImageSourcePropType;
+    title: string,
+    _count: {
+        ads: Number
+    }
+    bannerUrl: string;
 }
 
 interface Props extends TouchableOpacityProps {
@@ -19,7 +21,7 @@ export function GameCard({ data, ...rest }: Props) {
     return (
         <TouchableOpacity style={styles.container} {...rest}>
             <ImageBackground
-                source={data.cover}
+                source={{uri: data.bannerUrl}}
                 style={styles.cover}
             >
 
@@ -29,11 +31,11 @@ export function GameCard({ data, ...rest }: Props) {
                 >
 
                     <Text style={styles.name}>
-                        {data.name}
+                        {data.title}
                     </Text>
 
                     <Text style={styles.ads}>
-                        {data.ads} anúncios
+                        {data._count.ads} {data._count.ads > 1 ? ' anúncios' : ' anúncio' }  
                     </Text>
 
                 </LinearGradient>
