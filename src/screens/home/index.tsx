@@ -3,13 +3,12 @@ import { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation} from '@react-navigation/native'
 
-import { styles } from './styles';
-import logoImg from '../../assets/logo-nlw-esports.png';
-
 import { Heading } from '../../components/Heading';
 import { GameCard, GamecardProps } from '../../components/GameCard';
-
 import { Background } from '../../components/Background';
+
+import { styles } from './styles';
+import logoImg from '../../assets/logo-nlw-esports.png';
 
 export function Home() {
 

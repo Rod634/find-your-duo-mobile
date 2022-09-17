@@ -1,4 +1,5 @@
 import { View, ViewProps, Text } from 'react-native';
+
 import { styles } from './styles';
 
 interface HeadingProps extends ViewProps {

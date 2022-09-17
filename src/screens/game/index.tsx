@@ -5,14 +5,16 @@ import { View, TouchableOpacity, Image, FlatList, Text } from 'react-native';
 import { Entypo } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 
-import { Background } from '../../components/Background';
 import { GameParams } from '../../@types/navigation';
+
+import { Background } from '../../components/Background';
+import { DuoCard, DuoCardProps } from '../../components/DuoCard';
 import { Heading } from '../../components/Heading';
 
 import { styles } from './styles';
 import { THEME } from '../../theme';
 import logoImg from '../../assets/logo-nlw-esports.png';
-import { DuoCard, DuoCardProps } from '../../components/DuoCard';
+
 
 
 
